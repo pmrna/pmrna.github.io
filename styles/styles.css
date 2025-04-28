@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Tagesschrift&display=swap");
+
+/*  main style */
+:root {
+  --bg-color: #101016;
+  --brand-font-family: "Tagesschrift";
+  --font-family: "Crimson Text";
+  --main-headings-size: 3.125rem;
+  --headings-size: 2.25rem;
+  --links-color: #2f70e7;
+  --underline-color: #2f70e7;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  max-width: 62.5rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 0.4fr 1fr 1fr;
+  column-gap: 0.5rem;
+  overflow-y: auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  max-height: 6.25rem;
+  margin-top: 3.125rem;
+  font-family: var(--brand-font-family);
+}
+
+#logo {
+  grid-column: 1;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.headings {
+  font-size: var(--main-headings-size);
+  display: flex;
+  align-items: center;
+  text-decoration: var(--underline-color) underline;
+  font-size: 3.5rem;
+}
+
+main {
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
+  grid-row: 1 / -1;
+  grid-column: 2 / -1;
+  font-family: var(--font-family);
+}
+
+section {
+  font-size: 1.375rem;
+  max-width: 50rem;
+}
+
+p {
+  word-break: keep-all;
+  font-weight: normal;
+  margin-top: 1.25rem;
+}
+
+a {
+  text-decoration: white underline 0.125rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+a:hover {
+  color: var(--links-color);
+  text-decoration: var(--underline-color) underline 0.125rem;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.intro {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.projects {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.projects h2,
+.contacts h2 {
+  font-size: var(--headings-size);
+  margin-top: 1.25rem;
+}
+
+.contacts {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+li::marker {
+  color: var(--links-color);
+}
+
+.footer {
+  grid-column: 2;
+  grid-row: 5s;
+  font-family: var(--font-family);
+  color: #919191;
+  font-size: 16px;
+}
