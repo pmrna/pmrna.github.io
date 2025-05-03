@@ -3,8 +3,8 @@
 /*  main style */
 :root {
   --bg-color: #101016;
-  --brand-font-family: "Tagesschrift";
-  --font-family: "Crimson Text";
+  --primary-font: "Tagesschrift";
+  --secondary-font: "Crimson Text";
   --main-headings-size: 3.125rem;
   --headings-size: 2.25rem;
   --links-color: #2f70e7;
@@ -13,7 +13,6 @@
 
 body {
   background-color: var(--bg-color);
-  font-family: var(--font-family);
   color: #fff;
   /* width: 100vw; */
   height: 100vh;
@@ -32,7 +31,7 @@ header {
   grid-row: 1;
   max-height: 6.25rem;
   margin-top: 3.125rem;
-  font-family: var(--brand-font-family);
+  font-family: var(--primary-font);
 }
 
 #logo {
@@ -42,21 +41,22 @@ header {
 }
 
 .headings {
+  font-family: var(--primary-font);
   font-size: var(--main-headings-size);
   display: flex;
   align-items: center;
   text-decoration: var(--underline-color) underline;
   font-size: 3.5rem;
+  line-height: 2.2rem;
 }
 
 main {
-  grid-column: 2;
   display: grid;
   grid-template-rows: subgrid;
   grid-template-columns: subgrid;
   grid-row: 1 / -1;
   grid-column: 2 / -1;
-  font-family: var(--font-family);
+  font-family: var(--secondary-font);
 }
 
 section {
@@ -113,14 +113,20 @@ li::marker {
 .footer {
   grid-column: 2;
   grid-row: 5s;
-  font-family: var(--font-family);
+  font-family: var(--secondary-font);
   color: #919191;
   font-size: 16px;
 }
 
 @media only screen and (max-width: 600px) {
   body {
-    max-width: 330px;
+    max-width: 300px;
+    grid-template-columns: 0fr 1fr;
+    column-gap: 0rem;
+  }
+
+  #logo {
+    visibility: hidden;
   }
 }
 
