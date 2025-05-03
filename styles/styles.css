@@ -15,9 +15,8 @@ body {
   background-color: var(--bg-color);
   font-family: var(--font-family);
   color: #fff;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
-  max-width: 62.5rem;
   margin: auto;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -117,4 +116,34 @@ li::marker {
   font-family: var(--font-family);
   color: #919191;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    max-width: 330px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 550px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    max-width: 650px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1000px;
+  }
 }
