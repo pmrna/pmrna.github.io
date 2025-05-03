@@ -31,7 +31,6 @@ header {
   grid-row: 1;
   max-height: 6.25rem;
   margin-top: 3.125rem;
-  font-family: var(--primary-font);
 }
 
 #logo {
